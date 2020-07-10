@@ -1,0 +1,52 @@
+{
+  "name": "zoottelkeeper",
+  "version": "1.0.0",
+  "description": "ZoottelKeeper: A Zookeeper for your Zettelkasten folder",
+  "keywords": [
+    "zettelkasten",
+    "md",
+    "markdown"
+  ],
+  "main": "./dist/zookeeper.js",
+  "scripts": {
+    "build": "tsc --project ./src/tsconfig.json",
+    "coverage": "nyc mocha",
+    "lint": "tslint --project ./src/tsconfig.json",
+    "start:log": "forever start -o out.log -e err.log ./dist/zoottelkeeper.js",
+    "start": "forever start ./dist/zoottelkeeper.js",
+
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "stop": "forever stop ./dist/zoottelkeeper.js",
+    "list": "forever list"
+  },
+  "author": "Akos Balasko",
+  "dependencies": {
+    "forever": "3.0.0",
+    "minimist": "1.2.5",
+    "ts-node": "8.5.4",
+    "tslint": "5.19.0",
+    "tslint-config-prettier": "1.13.0",
+    "tslint-microsoft-contrib": "6.2.0",
+    "typescript": "3.8.3",
+    "watchr": "6.4.0"
+  },
+  "engines": {
+    "node": "10.18.1",
+    "npm": "5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akosbalasko/zoottelkeeper"
+  },
+  "homepage": "https://github.com/akosbalasko/zoottelkeeper",
+  "license": "(MIT OR Apache-2.0)",
+  "devDependencies": {
+    "@types/minimist": "1.2.0",
+    "@types/node": "14.0.20",
+    "@types/mocha": "7.0.2",
+    "@types/sinon": "9.0.1",
+    "mocha": "5.2.0",
+    "nyc": "13.0.1",
+    "sinon": "9.0.2"
+  }
+}
