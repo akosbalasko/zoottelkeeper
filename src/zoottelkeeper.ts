@@ -25,7 +25,7 @@ const deleteListener = (changeType: any, fullPath: any, currentStat: any, previo
             const pathArray = fullPath.split(path.sep);
             pathArray.pop();
             const fullParentFolderpath = pathArray.join(path.sep);
-            
+
             updateIndexFile(fullParentFolderpath);
             break;
         default:
@@ -47,7 +47,7 @@ const createListener = (changeType: any, fullPath: any, currentStat: any, previo
             break;
         default:
                         // tslint:disable-next-line:no-console
-            console.log('default cade', previousStat);
+            console.log('default case', previousStat);
             break;
     }
 };
@@ -60,13 +60,11 @@ const next = (err: any) =>  {
     console.log('watch successful on', options.rootFolder);
 }
 
-
 // Watch the path with the change listener and completion callback
 const deleteStalker = watchr.open(options.rootFolder, deleteListener, next).setConfig({
     ignoreHiddenFiles: true,
 });
-;
+
 const createStalker = watchr.open(options.rootFolder, createListener, next).setConfig({
     ignoreHiddenFiles: true,
 });
-;
