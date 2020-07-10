@@ -35,10 +35,9 @@ Assume that we have a Zettelkasten folder with 2 subfolders `FolderA` and `Folde
     - **[[fileA]]**
     - **[[000_Index_of_FolderA.md]]**
 
-and the content the existing index file in `FolderA` is going to be updated by removing the link of `fileA`:
+   and the content the existing index file in `FolderA` is going to be updated by removing the link of `fileA`:
 
     - **[[000_Index_of_FolderA.md]]**
-
 
 3. If fileA is being deleted from `FolderB` then its link is going to be removed from **000_Index_of_FolderB.md**
 
