@@ -5,7 +5,8 @@
   "keywords": [
     "zettelkasten",
     "md",
-    "markdown"
+    "markdown",
+    "wikilinks"
   ],
   "main": "./dist/zookeeper.js",
   "scripts": {
