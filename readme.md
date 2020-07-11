@@ -3,10 +3,10 @@
 # ZoottelKeeper: A Zookeeper for your Zettelkasten folder
 
 ## What? 
-The main idea of Zettelkasten is the links that connect your notes. However if you would like to organize your notes to folders, you have to set up and maintain an index Markdown file for each folder that contain all of the notes of the folder as links (wikilinks, internal md links etc.).
+The main idea of Zettelkasten is the links that connect your notes. However, if you would like to organize your notes to folders, you have to set up and maintain an index Markdown file for each folder that contains all of the notes of the folder as links (wikilinks, internal md links etc.).
 Which means that if you move a file to an other folder, your have to remove its link from the index file of the source folder, and add a link to the index file of the target folder. 
 
-If you are struggling with the same problems (like me), ZoottelKeeper is your program. It watches your folder, catches the changes and updates your index files within every folder and subfolders.
+If you are struggling with the same problems (like me), ZoottelKeeper is your program. It watches your folder, catches the changes and updates your index files within every folder and subfolders automatically.
 
 ## How does it work?
 ZoottelKeeper watches the followings:
@@ -16,7 +16,7 @@ ZoottelKeeper watches the followings:
 - _Move_ a file among rootFolder to subFolders
 - _Move_ a file among subfolders
 
-After recognizing that one of these actions happened, it creates an index file within the affected (sub)folder if it still does not exists.
+After recognizing that one of these actions happened, it creates an index file within the affected (sub)folder if it still does not exist.
 
 Its name is going to be **000_Index_of_\<folder>.md**. 
 
