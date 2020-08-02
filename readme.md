@@ -26,7 +26,7 @@ Then it writes the list of the files within that folder as wikistyled links.
 
 Assume that we have a Zettelkasten folder with 2 subfolders `FolderA` and `FolderB`.
 
-1. If I create a note called `fileA` in `FolderA` then ZoottelKeeper creates an index file within `FolderA` called **000_Index_of_FolderA.md** with content: 
+1. If I create a note called `fileA.md` in `FolderA` then ZoottelKeeper creates an index file within `FolderA` called **000_Index_of_FolderA.md** with content: 
     - **[[fileA]]**
     - **[[000_Index_of_FolderA.md]]**
 
