@@ -11,6 +11,7 @@ export const updateIndexFile = (fileFolder: string): void => {
     let indexContent = folderNames.map(folderName => `[[000_Index_of_${folderName}]]`).join(EOL) + EOL;
 
     const filesNames = folderEntries.filter(dirent => fs.lstatSync(path.join(fileFolder, dirent)).isFile() && !dirent.startsWith('.'));
-    indexContent += filesNames.map(fileName => `[[${fileName}]]`).join(EOL);
+    indexContent += filesNames.map(
+        fileName => `[[${path.parse(fileName).name}]]`).join(EOL);
     fs.writeFileSync(path.join(fileFolder, `000_Index_of_${targetFolderName}.md`), indexContent);
 };
