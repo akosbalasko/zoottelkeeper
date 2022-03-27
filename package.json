@@ -23,7 +23,7 @@
   "author": "Akos Balasko",
   "dependencies": {
     "forever": "3.0.0",
-    "minimist": "1.2.5",
+    "minimist": "1.2.6",
     "ts-node": "8.5.4",
     "tslint": "5.19.0",
     "tslint-config-prettier": "1.13.0",
